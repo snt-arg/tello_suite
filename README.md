@@ -13,13 +13,14 @@ The suite also includes a `Dockerfile` for easy setup without needing local inst
 ---
 
 ## 📑 Table of Contents
+
 - [🔧 Structure](#structure)
 - [⚙️ Installation](#installation)
-  - [Prerequisites](#prerequisites)
-  - [Dependencies](#dependencies)
+    - [Prerequisites](#prerequisites)
+    - [Dependencies](#dependencies)
 - [🤝 How to Contribute](#how-to-contribute)
-  - [Creating a New Plugin](#creating-a-new-plugin)
-  - [Creating a New Suite Package](#creating-a-new-suite-package)
+    - [Creating a New Plugin](#creating-a-new-plugin)
+    - [Creating a New Suite Package](#creating-a-new-suite-package)
 - [🐋 Docker](#docker)
 
 ---
@@ -41,6 +42,7 @@ The suite also includes a `Dockerfile` for easy setup without needing local inst
 ## ⚙️ Installation <a id="installation"></a>
 
 ### Prerequisites
+
 - ROS2 Humble or later (only tested with Humble)
 - Ubuntu 22.04
 
@@ -62,7 +64,9 @@ To simplify the setup, we provide a `bootstrap.sh` script that installs all depe
 Alternatively, if you prefer manual installation, ensure each of the dependencies above is installed.
 
 ## 🤝 How to Contribute <a id="how-to-contribute"></a>
+
 ### Creating a New Plugin
+
 1. Create a package in the plugins directory with your plugin's name.
 2. Develop your plugin using the plugin_server_base methodology.
 3. Update tello_bt to integrate your plugin. Detailed instructions are available in tello_bt.
@@ -73,21 +77,31 @@ Alternatively, if you prefer manual installation, ensure each of the dependencie
 > To be done!
 
 ## 🐋 Docker <a id="docker"></a>
+
 A `Dockerfile` is provided for using this suite within Docker. Follow these steps:
 
 1. Build the docker image
+
 ```sh
 docker build -t tello_suite .
 ```
+
 3. Create container
+
 ```sh
 docker run --name tello_suite --privileged --net=host tello_suite
 ```
+
 4. Start the container
+
 ```sh
 docker exed -t tello_suite bash
 ```
+
 5. Once inside the container, launch the system using:
+
 ```sh
 tello
 ```
+
+A test
